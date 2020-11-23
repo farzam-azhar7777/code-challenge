@@ -64,6 +64,12 @@ Companies should be able to pick or enter a color and have that color render on 
 
 _Assessing: Front end skills. Basic UX and UI Instinct. Ability to leverage CSS / HTML / JavaScript to build an engaging and reactive UI._
 
+### **☐ Add branding with logo and banner image **
+
+Companies should be able to add a logo of suitable size and also a banner image for their show page. Image should be responsive. Add the logo on the top left and banner image below to the title and description. Whitlist the valid extensions for the images. Limit the size so that we do not bloat the server. (Bonus: Directly upload the image from client side.)
+
+_Assessing: Rails skills with best practices and front end UI/UX skills.
+
 ### **☐ Include test coverage for all your changes**
 
 For all functionality extend or add tests from existing tests.

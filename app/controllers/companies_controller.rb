@@ -15,7 +15,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     if @company.save
-      redirect_to companies_path, notice: "Saved"
+      redirect_to companies_path, notice: 'Saved'
     else
       render :new
     end
@@ -26,11 +26,19 @@ class CompaniesController < ApplicationController
 
   def update
     if @company.update(company_params)
-      redirect_to companies_path, notice: "Changes Saved"
+      redirect_to @company, notice: 'Changes Saved'
     else
       render :edit
     end
-  end  
+  end
+
+  def destroy
+    if @company.destroy
+      redirect_to companies_path, notice: 'Company deleted successfully'
+    else
+      redirect_back(fallback_location: root_url, notice: 'Company could not be deleted!')
+    end
+  end
 
   private
 
@@ -42,6 +50,7 @@ class CompaniesController < ApplicationController
       :zip_code,
       :phone,
       :email,
+      :color,
       :owner_id,
       services: []
     )

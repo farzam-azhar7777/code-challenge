@@ -53,7 +53,21 @@
       </div>
       <div class="col-lg offset-lg-1">
         <div class="form-group">
-          <%= f.text_field :email, class: "form-control", placeholder: "hello@company.com"%>
+          <%= f.text_field :email, class: "form-control", placeholder: "hello@getmainstreet.com", pattern: Company::EMAIL_REGEX.inspect[3..-4], title: Company::EMAIL_REGEX_MESSAGE %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-lg-3">
+      <div class="col-lg-3">
+        <label>
+          <strong class='clearfix'>Brand Color</strong>
+          <small class="text-muted">Color render on company show page</small>
+        </label>
+      </div>
+      <div class="col-lg offset-lg-1">
+        <div class="form-group">
+          <%= f.text_field :color, type:"color" %>
         </div>
       </div>
     </div>
